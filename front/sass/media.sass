@@ -1,148 +1,145 @@
-@media screen and (max-width: 1255px)
+@media screen and (min-width: 2300px)
   .banner
-    &__title
-      font-size: 64px
-      line-height: 62px
-    &__dep
+    &__img
       &-left
-        margin: 14px -15px 0 0
-      .in
-        font-size: 48px
-        line-height: 62px
-        letter-spacing: 0.01em
-        text-transform: uppercase
-        opacity: 0.35
-        color: transparent
-        -webkit-text-stroke-width: 1.5px
-        -webkit-text-stroke-color: #EDEDED
-        margin: 0 0 6px 0
-      p
-        font-size: 40px
-        line-height: 50px
-        span
-          font-size: 24px
-          line-height: 31px
+        left: -50px
+        width: 52%
 
-
-
-
-@media screen and (max-width: 1010px)
+@media screen and (max-width: 1670px)
   .banner
-    padding: 150px 0
-    &__title
-      font-size: 48px
-      line-height: 50px
-    &__dep
-      right: 15px
+    padding: 5% 0 11%
+    &__info
+      transform: scale(1)
+
+@media screen and (max-width: 1305px)
+  .banner
+    padding: 3% 0 7%
+    &__info
+      transform: scale(.8)
+    &__img
       &-left
-        margin: 1px -30px 0 0
-      .in
-        font-size: 40px
-        line-height: 51px
-        margin: 0 0 10px 0
-        &-none
-          display: block
-      p
-        font-size: 32px
-        line-height: 41px
-        margin: 0 0 10px 0
-        span
-          font-size: 24px
-          line-height: 31px
+        left: -30px
+        width: 52%
+    &__marquee
+      padding: 9px 0
+      &-list
+        margin: 0 12px 0 0
+      &-item
+        font-size: 11px
+        line-height: 14px
+        &:not(:last-child)
+          margin: 0 12px 0 0
+        &:nth-child(2)
+          min-width: 24px
+      &-fav
+        margin: 0 12px 0 0
+        min-width: 21px
+        height: 16px
+
+@media screen and (max-width: 1120px)
+  .banner
+    padding: 7% 0 11%
+    &__img
       &-right
-        position: relative
-        top: -18px
-
-@media screen and (max-width: 770px)
-  .banner
-    background-position: -173px 0
-
-@media screen and (max-width: 767px)
-  .banner
-    &__dep
-      right: 15px
-      &-left
-        margin: 1px -52px 0 0
-    &__title
-      font-size: 44px
-      line-height: 46px
-
-@media screen and (max-width: 730px)
-  .banner
-    background-position: -174px 0
-
-@media screen and (max-width: 725px)
-  .banner
-    padding: 96px 0 67px 0
-    background-position: 50% 0
-    position: relative
-    &__container
-      position: static
-    &__title
-      font-size: 45px
-      line-height: 41px
-      text-align: center
-      margin: 0 0 40px 0
-    &__row
-      flex-direction: column
-      align-items: center
-    &__dep
-      position: static
-      right: auto
-      transform: translateY(0)
-      flex-direction: column
-      align-items: center
-      &-left,
-      &-right
-        display: flex
-        margin: 0
-        flex-direction: row
-        position: static
-        top: 0
-        padding: 0
-        .in
-          white-space: nowrap
-          font-size: 24px
-          line-height: 31px
-          margin: 0 10px 0 0
-          &-mob
-            display: block
-        p
-          white-space: nowrap
-          font-size: 24px
-          line-height: 31px
-          margin: 0 6px 0 -3px
-          position: relative
-          top: 9px
-          span
-            font-size: 15px
-            line-height: 19px
-            margin-top: -2px
-      &-left
-        margin: 0 0 20px 0
-      &-right
-        p
-          margin: 0 6px 0 -3px
-
-@media screen and (max-width: 520px)
-  .banner
-    &__dep
-      .in-mob
+        background: none
         display: none
-
-@media screen and (max-width: 446px)
-  .banner
-    &__dep
       &-left
-        position: relative
-        left: 35px
+        width: 100%
+        left: 0
+        background: url("../img/img-tab.jpg") no-repeat 50% 0/contain
+    &__info
+      transform: scale(1)
+      &-title
+        font-size: 38px
+        line-height: 46px
+        margin: 0 0 10px 0
+      &-item
+        font-size: 15px
+        line-height: 20px
+        &:nth-child(2)
+          max-width: 29px
+      &-list
+        margin: 0 0 20px 0
+      &-btn
+        font-size: 14px
+        line-height: 18px
+        padding: 17px 30px 15px
 
-@media screen and (max-width: 362px)
+@media screen and (max-width: 900px)
   .banner
-    &__dep
+    padding: 4% 0 10%
+
+@media screen and (max-width: 755px)
+  .banner
+    padding: 2% 0 8%
+    &__info
+      transform: scale(.75)
+
+@media screen and (max-width: 627px)
+  .banner
+    padding: 60% 0 100px 0
+    &__img
       &-left
-        left: 61px
+        background: url("../img/img-mob.jpg") no-repeat 50% 0/contain
+    &__info
+      transform: scale(1)
 
-@media screen and (max-width: 690px) and (orientation: landscape)
+@media screen and (max-width: 500px)
   .banner
-    background-position: 94% 0
+    justify-content: stretch
+    padding: 60% 15px 80px
+    &__marquee
+      padding: 13px 0
+      justify-content: center
+      &-list
+        display: none
+        &:nth-child(1)
+          display: flex
+          justify-content: center
+          margin: 0
+      &-item
+        font-size: 16px
+        line-height: 19px
+        &:not(:last-child)
+          margin: 0 20px 0 0
+        &:nth-child(2)
+          min-width: 20px
+          max-width: 35px
+      &-fav
+        background: none
+        display: none
+    &__info
+      width: 100%
+      &-title
+        font-size: 34px
+        line-height: 40px
+        margin: 0 0 10px 0
+      &-list
+        margin: 0 0 20px 0
+      &-item
+        font-size: 18px
+        line-height: 24px
+        &:not(:last-child)
+          margin: 0 12px 0 0
+        &:nth-child(2)
+          min-width: 35px
+          max-width: 35px
+      &-btn
+        font-size: 16px
+        line-height: 21px
+        padding: 18px 15px 16px
+        min-width: 100%
+        text-align: center
+        border-radius: 4px
+
+@media screen and (max-width: 365px)
+  .banner
+    &__info
+      &-title
+        font-size: 30px
+        line-height: 37px
+      &-item
+        font-size: 15px
+        line-height: 21px
+
+

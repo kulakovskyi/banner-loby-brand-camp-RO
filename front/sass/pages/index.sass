@@ -7,7 +7,7 @@ $text: #292929
 
 $font-suisse-bold: SuisseIntl-Bold, sans-serif //700
 $font-suisse-reg: SuisseIntl-Regular, sans-serif //400
-$font-suisse-semb: SuisseIntl-SemiBold, sans-serif //600
+$font-suisse-semb: SuisseIntl-SemiBold, sans-serif //600 //
 $font-wulkan: WulkanDisplay, sans-serif //
 
 body
@@ -21,86 +21,112 @@ body
 
 .banner
   overflow: hidden
-  padding: 125px 0
-  @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
-    background: url('../img/bg-desc-2.jpg') no-repeat 50% 0/cover
-  @media screen and (min-width: 601px) and (max-width: 1120px) and (orientation: portrait)
-    background: url('../img/bg-tab-2.jpg') no-repeat 50% 0/cover
-  @media screen and (max-width: 690px) and (orientation: portrait)
-    background: url("../img/bg-mob-2.jpg") no-repeat 50% 0/cover
-  @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
-    background: url("../img/bg-tab-2.jpg") no-repeat 50% 0/cover
-  &__container
-    max-width: 1290px
-    padding: 0 15px
-    margin: 0 auto
-    position: relative
-  &__row
-    display: flex
-    justify-content: space-between
-    align-items: center
+  padding: 8% 0 11%
+  background: $blue
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  &__img
+    &-left
+      position: absolute
+      top: 0
+      left: 0
+      width: 50%
+      height: 100%
+      background: url("../img/img-left-desc.jpg") no-repeat 50% 0/contain
+
+    &-right
+      position: absolute
+      top: 0
+      right: 0
+      width: 50%
+      height: 100%
+      z-index: 2
+      background: url("../img/img-right-desc.jpg") no-repeat 50% 0/contain
   &__info
+    position: relative
+    z-index: 3
     display: flex
     flex-direction: column
-    align-items: flex-start
-  &__title
-    font-family: $font-suisse-bold
-    font-size: 76px
-    line-height: 75px
-    letter-spacing: 0.04em
-    text-transform: uppercase
-    color: #EDEDED
-    span
-      font-family: $font-wulkan
-  &__dep
-    position: absolute
-    top: 57%
-    right: 15px
-    transform: translateY(-50%)
-    display: flex
-    z-index: 2
-    &-left,
-    &-right
-      display: flex
-      flex-direction: column
-      align-items: center
-    &-left
-      margin: 80px -15px 0 0
-    .in
-      font-family: $font-suisse-semb
-      font-size: 64px
-      line-height: 79px
-      letter-spacing: 0.01em
-      text-transform: uppercase
-      opacity: 0.35
-      color: transparent
-      -webkit-text-stroke-width: 1.5px
-      -webkit-text-stroke-color: #EDEDED
-      &-none
-        display: none
-      &-mob
-        display: none
-    p
-      font-family: $font-suisse-semb
-      font-size: 48px
-      line-height: 62px
+    align-items: center
+    transform: scale(1.2)
+    &-title
       text-align: center
-      letter-spacing: 0.01em
+      font-family: $font-suisse-semb
+      margin: 0 0 20px 0
+      font-size: 56px
+      line-height: 68px
+      letter-spacing: 0.03em
       text-transform: uppercase
-      color: #EDEDED
+      font-feature-settings: 'pnum' on, 'lnum' on
+      color: $grey
       span
-        font-family: $font-suisse-semb
-        display: block
-        font-size: 36px
-        line-height: 46px
-        white-space: nowrap
-        margin-top: -4px
-    &-right
-      padding: 10px 0 0 0
-      .in
-        line-height: 82px
-        &-last
-          margin: 0 0 91px 0
-      p
-        line-height: 75px
+        font-family: $font-wulkan
+        color: $magenta
+    &-list
+      display: flex
+      align-items: center
+      margin: 0 0 30px 0
+    &-item
+      font-family: $font-suisse-semb
+      font-size: 18px
+      line-height: 23px
+      text-align: center
+      letter-spacing: 0.03em
+      text-transform: uppercase
+      font-feature-settings: 'pnum' on, 'lnum' on
+      color: $grey
+      &:not(:last-child)
+        margin: 0 18px 0 0
+    &-btn
+      font-family: $font-suisse-semb
+      display: inline-block
+      font-size: 17px
+      line-height: 22px
+      padding: 18px 35px 16px
+      letter-spacing: 0.08em
+      text-transform: uppercase
+      border-radius: 2.6653px
+      color: $blue
+      background: $green
+      transition: background-color .3s ease
+      &:hover
+        background: $green-hover
+
+  &__marquee
+    padding: 14px 0
+    background: $magenta
+    min-width: 100%
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 4
+    display: flex
+    align-items: center
+    &-list
+      margin: 0 18px 0 0
+      display: flex
+      align-items: center
+    &-item
+      font-family: $font-suisse-semb
+      font-size: 20px
+      line-height: 26px
+      text-align: center
+      letter-spacing: 0.03em
+      text-transform: uppercase
+      font-feature-settings: 'pnum' on, 'lnum' on
+      color: $grey
+      white-space: nowrap
+      &:not(:last-child)
+        margin: 0 20px 0 0
+      &:nth-child(2)
+        min-width: 40px
+    &-fav
+      margin: 0 18px 0 0
+      min-width: 40px
+      height: 30px
+      background: url("../img/fav.svg") no-repeat 50% 0/contain
+
 
